@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görev Yönetimi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Görev Yönetimi</h1>
+        
+        <form id="taskForm">
+            <div class="form-group">
+                <label for="title">Başlık:</label>
+                <input type="text" id="title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="description">Açıklama:</label>
+                <textarea id="description"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Öncelik:</label>
+                <div class="priority-group">
+                    <input type="radio" name="priority" value="dusuk" id="low">
+                    <label for="low">Düşük</label>
+                    
+                    <input type="radio" name="priority" value="orta" id="medium">
+                    <label for="medium">Orta</label>
+                    
+                    <input type="radio" name="priority" value="yuksek" id="high">
+                    <label for="high">Yüksek</label>
+                </div>
+            </div>
+            
+            <button type="submit">Ekle</button>
+        </form>
+
+        <div id="errorMessage" class="error-message"></div>
+        
+        <div id="taskList" class="task-list">
+            <!-- görevler javascript iledinamik olarak html'e ekleniyor, taskList.appendChild(taskItem) -->
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html> 
